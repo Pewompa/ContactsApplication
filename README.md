@@ -1,2 +1,2 @@
 # ContactsApplication
-Coding Assignment for CodeWorks
+Basic 'contacts' website
