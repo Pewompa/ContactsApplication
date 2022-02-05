@@ -1,14 +1,17 @@
-
-h1{
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-family: Inter, sans-serif;
-    
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: Inter, sans-serif;
 }
 
-h2{
-font-weight: 400;
-word-spacing: 5px;
+h2 {
+  font-weight: 400;
+  word-spacing: 5px;
+}
+
+/*to avoid <th> from hovering, taken from https://stackoverflow.com/questions/11880892/html-table-highlight-row-on-hover-except-first-row-header*/
+tr:not(:first-child):hover {
+  background-color: rgb(234, 238, 255);
 }
 
 /*To hide arrows in number inputs, taken from https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
@@ -16,4 +19,4 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-};
+}
