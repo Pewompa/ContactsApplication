@@ -14,14 +14,12 @@ const country = document.querySelector('#country');
 
 const table = document.querySelector('table')
 
-// const rows = document.querySelectorAll('table');
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     const nombre = nom.value;
     const surname = sur.value;
     const phone = `${code.value} ${numb.value}`;
     const address = `${street.value} ${homeNumb.value} ${post.value} ${city.value} ${country.value}`;
-    // const button = document.createElement('button');
 
     let tabl = table
     let row = tabl.insertRow();
@@ -57,31 +55,23 @@ form.addEventListener('submit', function (e) {
 function myFunction() {
     let input = document.getElementById("myInput");
     let filter = input.value.toUpperCase();
-    // let table = document.getElementById("myTable");
     let tr = table.getElementsByTagName("tr");
     for (i = 0; i < tr.length; i++) {
         td = tr[i].getElementsByTagName("td")[0];
         if (td) {
             let txtValue = td.textContent || td.innerText;
+            console.log(txtValue)
+            console.log(filter)
+            console.log(txtValue.toUpperCase().indexOf(filter))
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
                 tr[i].style.display = "";
             } else {
                 tr[i].style.display = "none";
             }
         }
+        console.log(tr[i])
     }
 }
-$('h2').text('Contact List')
-// function myCreateFunction() {
-//     var table = document.getElementById("myTable");
-//     var row = table.insertRow(0);
-//     var cell1 = row.insertCell(0);
-//     var cell2 = row.insertCell(1);
-//     cell1.innerHTML = "NEW CELL1";
-//     cell2.innerHTML = "NEW CELL2";
-// }
 
-// function myDeleteFunction() {
-//     document.getElementById("myTable").deleteRow(0);
-// }
+$('h2').text('Contact List')
 
