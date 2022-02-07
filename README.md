@@ -1,4 +1,4 @@
-# ContactsApplication
+# Contacts Application
 Basic 'contacts' website that I need to built as part of a bootcamp's entry assignment.
 Here are the requirements:
 
@@ -20,17 +20,4 @@ There needs to be a search bar where the user can find existing contacts.
  
 Your CSS needs to be clean.
  
-Use 3 separate files: one for CSS, one for HTML, and one for JavaScript and jQuery.
- 
-If your submission contains multiple lines of code taken from any online sources (like code snippets, articles, tutorials, etc.) add a comment citing that work. Copying code without attribution will disqualify you.
- 
-If you don’t have previous experience with the following technologies, complete these tutorials before starting to work on your assignment.
- 
 
-HTML
-
-CSS
-
-Chrome DevTools (only the “CSS”, “DOM”, and “JavaScript” sections)
-
-jQuery
