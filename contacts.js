@@ -22,7 +22,6 @@ form.addEventListener('submit', function (e) {
     const phone = `${code.value} ${numb.value}`;
     const address = `${street.value} ${homeNumb.value} ${post.value} ${city.value} ${country.value}`;
     
-
     let row = table.insertRow();
     let cell1 = row.insertCell();
     let cell2 = row.insertCell();
@@ -35,8 +34,6 @@ form.addEventListener('submit', function (e) {
     cell3.innerText = phone
     cell4.innerText = address;
     cell5.innerHTML = '<button type="button" class="btn">&times;</button>';
-
-  
 
     row.addEventListener('click', function (e) {
         e.target.className === 'btn' && confirm('Delete contact?') === true && row.remove();
@@ -51,15 +48,12 @@ form.addEventListener('submit', function (e) {
     post.value = ''
     city.value = ''
     country.value = '';
-    
-
 })
 
 //search bar retrieved from https://www.w3schools.com/howto/howto_js_filter_table.asp 
 function search() {
     let input = document.getElementById("lookUp");
     let filter = input.value.toUpperCase();
-    // let table = document.getElementById("myTable");
     let tr = table.getElementsByTagName("tr");
     for (i = 0; i < tr.length; i++) {
         td = tr[i].getElementsByTagName("td")[0];
@@ -73,13 +67,14 @@ function search() {
         }
     }
 }
-$('h2').text('Contact List')
 
-//prevent the page from rereshing when hitting enter in the search bar retrieved from https://social.msdn.microsoft.com/Forums/en-US/6f8e3b5b-098b-4a3b-a8d1-4312ea280221/avoid-page-refresh-when-i-press-enter-key?forum=aspgettingstarted
+//prevent the page from rereshing when hitting enter in the search bar, retrieved from https://social.msdn.microsoft.com/Forums/en-US/6f8e3b5b-098b-4a3b-a8d1-4312ea280221/avoid-page-refresh-when-i-press-enter-key?forum=aspgettingstarted
 $(function(){  
     $(':text').bind('keydown',function(e){
         if(e.keyCode==13)
         e.preventDefault();                  
     });  
 });  
+
+$('h2').text('Contact List')
   
